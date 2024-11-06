@@ -27,6 +27,7 @@
 // better solution
 const maskify = (cc) => cc.slice(-4).padStart(cc.length, '#')
 
+
 console.log(maskify("Nananananananananananananananana Batman!"));
 
 
