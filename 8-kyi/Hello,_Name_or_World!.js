@@ -9,5 +9,9 @@
 //   or `name` = ""        => return "Hello, World!"
 
 function hello(name) {
-    return '';
+  if (!name || name === '') return "Hello, World!"
+  const trueName = name[0].toUpperCase() + name.slice(1).toLowerCase()
+    return `Hello, ${trueName}!`;
   }
+  console.log(hello());
+  
