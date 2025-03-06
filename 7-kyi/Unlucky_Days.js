@@ -19,4 +19,3 @@ return count
 }
 
 console.log(unluckyDays(2015));
-
