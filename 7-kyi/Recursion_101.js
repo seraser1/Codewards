@@ -8,24 +8,26 @@
 // More examples in tests cases. Good luck!
 
 
-const solve = (a,b) => {
-    if(a == 0 || b == 0) return [a,b]
-    if(a >= 2 * b){
-        console.log(a);
-        console.log(b);
-        a -= 2 * b
-        console.log(a);
-        console.log(b);
-        return solve(a, b)
-    }
-    if(b >= 2 * a){
-        console.log(a);
-        console.log(b);
-        b -= 2*a
-        console.log(a);
-        console.log(b);
-        return solve(a,b)
-    }
-    else return [a,b]
-}
-console.log(solve(0,0));
+// const solve = (a,b) => {
+//     if(a == 0 || b == 0) return [a,b]
+//     if(a >= 2 * b){
+//         console.log(a);
+//         console.log(b);
+//         a -= 2 * b
+//         console.log(a);
+//         console.log(b);
+//         return solve(a, b)
+//     }
+//     if(b >= 2 * a){
+//         console.log(a);
+//         console.log(b);
+//         b -= 2*a
+//         console.log(a);
+//         console.log(b);
+//         return solve(a,b)
+//     }
+//     else return [a,b]
+// }
+const solve = (a,b) => !a || !b ? [a, b] : a >= 2*b ? solve(a - 2 * b, b) : b >= 2*a ? solve(a, b - 2 * a) : [a, b];
+
+console.log(solve(340,4));
