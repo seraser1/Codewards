@@ -22,8 +22,9 @@
 // b may be greater than the length of items.
 
 
-const inverseSlice = (items, a, b) => items.slice(0,a).concat(items.slice(b))
+// const inverseSlice = (items, a, b) => items.slice(0,a).concat(items.slice(b))
 // const inverseSlice = (items, a, b) => [...items.slice(0,a), ...items.slice(b)]
+const inverseSlice = (items, a, b) => items.splice(a, b-a)
 
 console.log(inverseSlice([12, 14, 63, 72, 55, 24], 2, 4));
 
